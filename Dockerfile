@@ -1,5 +1,7 @@
 # Dockerfile
-FROM amun/wppconnect-server
+FROM areesmoon/wppconnect-server:v0.0.0
+COPY --chown=www-data:www-data html/ /var/www/html/
+RUN rm -f /var/www/html/index.html
 WORKDIR /root/wppconnect-server
 EXPOSE 22
 EXPOSE 21465
