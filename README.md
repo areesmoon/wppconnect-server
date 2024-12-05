@@ -5,14 +5,14 @@ An up and running WPPConnect Whatsapp BOT API server
 
 ### 1. Run the container
 ```
-docker run -d --name my-wppconnect-server -p 81:21465 areesmoon/wppconnect-server
+docker run -d --name my-wppconnect-server -p 21465:21465 areesmoon/wppconnect-server
 ```
-Note: 21465 is the internal container API port, we expose it to port 81 for the ease of use
+Note: 21465 is the internal container API port, we expose it to port 21465 for the ease of use
 
 ## Authentication
 
 ### 1. Accessing the API pages
-Simply navigate to http://localhost:81/api-docs/ and you will se the ready to use API pages.
+Simply navigate to http://localhost:21465/api-docs/ and you will se the ready to use API pages.
 
 ### 2. Generating token
 In the above page, you can generate token by drilling down the first row `[POST] /api/{session}/{secretkey}/generate-token`. Default session name and secret key is provided, just click [Execute](#) to create it. Save the post result on a notepad for next use.
