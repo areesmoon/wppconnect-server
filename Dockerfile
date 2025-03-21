@@ -20,6 +20,9 @@ WORKDIR /root
 RUN git clone https://github.com/wppconnect-team/wppconnect-server
 COPY --from=stage /root/wppconnect-server/ /root/wppconnect-server/
 
+# Change dir to /root/wppconnect-server
+WORKDIR /root/wppconnect-server
+
 # Update package @wppconnect-team/wppconnect
 RUN echo "Updating WPPConnect..." && npm update @wppconnect-team/wppconnect
 RUN echo "WPPConnect updated!"
